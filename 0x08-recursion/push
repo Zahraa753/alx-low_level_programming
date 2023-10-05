@@ -1,0 +1,6 @@
+#!/bin/bash
+
+read inp
+git add $inp
+git commit -m "happy day"
+git push
