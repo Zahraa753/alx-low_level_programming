@@ -18,6 +18,8 @@ char *str_concat(char *s1, char *s2)
 
 	for (; s1[i] != '\0'; i++)
 		;
+	if (s[i] == NULL)
+		return (NULL);
 	ptr = malloc(i + 1);
 		for (i = 0; s1[i] != '\0'; i++)
 		{
@@ -25,6 +27,8 @@ char *str_concat(char *s1, char *s2)
 		}
 	for (; s2[j] != '\0'; j++)
 		;
+	if (s2[j] == NULL)
+		return (NULL);
 	pon = realloc(ptr, j + 1);
 	for (j = 0; s2[j] != '\0'; j++, i++)
 	{
