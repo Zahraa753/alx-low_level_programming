@@ -24,20 +24,20 @@ char *str_concat(char *s1, char *s2)
 		s2 = "\0";
 	for (; s1[i] != '\0'; i++)
 		;
-	ptr = malloc(i + 1);
-	size1 = i + 1;
-		for (i = 0; i < size1; i++)
-		{
-			ptr[i] = s1[i];
-		}
+	size1 = i;
 	for (; s2[j] != '\0'; j++)
 		;
 	size2 = j;
-	pon = realloc(ptr, j);
-	for (j = 0;j < size2 ; j++, i++)
+	pon = malloc((size1 + size2) * sizeof(char) + 1);
+	if (pon  == 0)
+		return (0);
+	for (i = 0; i <= (size1 + size2); i++)
 	{
-		pon[i] = s2[j];
+		if (i < size1)
+			pon[i] = s1[i];
+		else
+			pon[i] = s2[i - size1];
 	}
-	pon[i] = '\0';
+	m[i] = '\0';
 	return (pon);
 }
