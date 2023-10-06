@@ -13,7 +13,6 @@ char *str_concat(char *s1, char *s2)
 {
 	int i = 0;
 	int j = 0;
-	char *ptr;
 	char *pon;
 	int size1;
 	int size2;
@@ -38,6 +37,6 @@ char *str_concat(char *s1, char *s2)
 		else
 			pon[i] = s2[i - size1];
 	}
-	m[i] = '\0';
+	pon[i] = '\0';
 	return (pon);
 }
