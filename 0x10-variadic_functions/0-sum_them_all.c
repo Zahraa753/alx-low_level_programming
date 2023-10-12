@@ -13,7 +13,7 @@ int sum_them_all(const unsigned int n, ...)
 	int comp = 0;
 	var_list agr;
 
-	var_arg(agr, n);
+	var_start(agr, n);
 	if (n == 0)
 		return (0);
 	for (i = 0; i < n - 1; i++)
