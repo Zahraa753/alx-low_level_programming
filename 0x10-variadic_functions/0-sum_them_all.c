@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 
 /**
  * sum_them_all - the used function to compare numbers with 0
