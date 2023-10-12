@@ -10,14 +10,15 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	int i;
-	int comp;
+	int comp = 0;
 	var_list agr;
 
 	comp = var_arg(agr, n);
+	if (n == 0)
+		return (0);
 	for (i = 0; i < n - 1; i++)
 	{
-		comp = var_arg(agr, n);
-		if (comp == 0)
-			return (0);
+		comp = var_arg(agr, int);
 	}
+	return (comp);
 }
