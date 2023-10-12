@@ -18,7 +18,7 @@ int sum_them_all(const unsigned int n, ...)
 	va_start(agr, n);
 	while (i--)
 	{
-		comp += var_arg(agr, int);
+		comp += va_arg(agr, int);
 	}
 	va_end(agr);
 	return (comp);
