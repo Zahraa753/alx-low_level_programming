@@ -14,9 +14,9 @@ int sum_them_all(const unsigned int n, ...)
 	var_list agr;
 
 	var_start(agr, n);
-	if (n == 0)
+	if (!n)
 		return (0);
-	for (i = 0; i < n - 1; i++)
+	while (i--)
 	{
 		comp += var_arg(agr, int);
 	}
