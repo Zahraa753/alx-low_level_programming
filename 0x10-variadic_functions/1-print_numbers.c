@@ -12,7 +12,6 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	int i = n;
-	int val;
 	va_list num;
 
 	if (!n)
