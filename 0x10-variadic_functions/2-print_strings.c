@@ -10,7 +10,7 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i = n;
+	int i = n;
 	char *ptr;
 	va_list cmp;
 
@@ -21,7 +21,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 	va_start(cmp, n);
 	while (i--)
-		printf("%s%s", (ptr = va_arg(cmp, char *)) ? ptr : "nil",
+		printf("%s%s", (ptr = va_arg(cmp, char *)) ? ptr : "(nil)",
 			i ? (separator ? separator : "") : "\n");
 	va_end(cmp);
 }
