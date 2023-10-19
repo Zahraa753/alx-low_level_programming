@@ -33,7 +33,7 @@ size_t print_list(const list_t *h)
 	{
 		printf("[%d] %s\n", _strlen(h), h->str ? h->str : "(nil)");
 		h = h->next;
-		j++
+		j++;
 	}
 	return (j);
 }
