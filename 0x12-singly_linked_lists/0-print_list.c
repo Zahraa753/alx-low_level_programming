@@ -14,8 +14,8 @@ int _strlen(char *s)
 	if (!s)
 		return (0);
 	while (*s++)
-		i++;
-	return (i);
+		j++;
+	return (j);
 }
 
 /**
@@ -33,7 +33,7 @@ size_t print_list(const list_t *h)
 	{
 		printf("[%d] %s\n", _strlen(h), h->str ? h->str : "(nil)");
 		h = h->next;
-		i++
+		j++
 	}
-	return (i);
+	return (j);
 }
