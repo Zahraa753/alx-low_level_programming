@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * _strlen - this function to givr=e me the numbers of elements in s
