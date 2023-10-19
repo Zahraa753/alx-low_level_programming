@@ -4,7 +4,7 @@
  * _strlen - this function to givr=e me the numbers of elements in s
  * @s: this is the passed data
  *
- * Return: the value of i
+ * Return: the value of j
 */
 
 int _strlen(char *s)
