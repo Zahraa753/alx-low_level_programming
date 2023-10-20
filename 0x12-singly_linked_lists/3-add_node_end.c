@@ -16,7 +16,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (!head || !str)
 	{
-		return (0);
+		return (NULL);
 	}
 	if (str)
 	{
@@ -24,7 +24,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		if (!last->str)
 		{
 			free(str);
-			return (0);
+			return (NULL);
 		}
 		last->len = _strlen(last->str);
 	}
@@ -32,7 +32,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 		while (com->next)
 			com = com->next;
-		com->first = last;
+		com->next = last;
 	}
 	else
 		*head = last;
