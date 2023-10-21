@@ -15,7 +15,7 @@ void free_list(list_t *head)
 	if (!head)
 		return;
 	node = head;
-	while(node)
+	while (node)
 	{
 		cont = node->next;
 		free(node->str);
