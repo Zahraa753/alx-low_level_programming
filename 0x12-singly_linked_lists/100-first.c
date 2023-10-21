@@ -1,15 +1,11 @@
 #include "lists.h"
-
-void _constructor(void) __attribute__ ((constructor));
-
+void _alert(void)__attribute__ ((constructor));
 /**
- * _constructor - print before main() be excuted
- *
- * Return: nothing
+ * _alert - print before main() be excuted
  */
 
-void _constructor(void)
+void _alert(void)
 {
-	printf("You're beat! and yet, you must allow,\n"
-		"I bore my house upion my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upion my back!\n");
 }
