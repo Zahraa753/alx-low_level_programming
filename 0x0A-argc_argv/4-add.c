@@ -17,18 +17,13 @@ int main(int argc, char *argv[])
 	int sum = 0;
 	char *p;
 
-	if (argv[1] == NULL)
-		printf("0\n");
 	while (--argc)
 	{
 		for (p = argv[argc]; *p; p++)
 		{
-			if (*p >= '0' || *p <= '9')
-			{
-				sum +=  atoi(argv[argc]);
-			}
-			else
+			if (*p < '0' || *p > '9')
 				return (printf("Error\n"), 1);
+			sum += atoi(argv[argc]);
 		}
 
 	}
