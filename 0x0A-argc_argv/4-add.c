@@ -14,13 +14,12 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
 	int sum = 0;
 	char *p;
 
 	if (argv[1] == NULL)
 		printf("0\n");
-	while (--agrc)
+	while (--argc)
 	{
 		for (p = argv[argc]; *p; p++)
 		{
