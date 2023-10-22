@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	{
 		for (p = argv[argc]; *p; p++)
 		{
-			if (*p > '0' || *p < '9')
+			if (*p >= '0' || *p <= '9')
 			{
 				sum +=  atoi(argv[argc]);
 			}
