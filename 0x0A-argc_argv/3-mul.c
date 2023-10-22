@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <string.h>
 /**
  * main - Entry point
  * @argc: the number of data
@@ -10,18 +11,23 @@
  * Return: success 0
 */
 
-int main(int argc, char *argv[])
+int main(int argc __attribute__ ((unused)), char *argv[])
 {
-	if (!argv[1] && !argv[2])
+	int x1;
+	int x2;
+
+	if (argv[1] == NULL || argv[2] == NULL)
 	{
 		printf("Error\n");
 		return (1);
 	}
 	else
 	{
-		printf("%d\n", (atoi(argv[1]) * atoi(argv[2])));
+		x1 = atoi(argv[1]);
+		x2 = atoi(argv[2]);
+		printf("%d\n", x1 * x2);
 	}
-	return (0)
+	return (0);
 }
 
 
