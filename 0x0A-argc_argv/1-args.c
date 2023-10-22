@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main _ Entry point
+ * main - Entry point
  * @argc: the number of named
  * @argv: the named
  *
