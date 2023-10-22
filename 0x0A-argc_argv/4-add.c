@@ -1,4 +1,4 @@
-#include <stio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -16,20 +16,23 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int sum = 0;
+	char *p;
 
 	if (argv[1] == NULL)
 		printf("0\n");
-	for (i = 0; i < argc; i++)
+	while (--agrc)
 	{
-		if ((atoi(argv)))
+		for (p = argv[argc]; *p; p++)
 		{
-			sum += atoi(argv[i]);
+			if (*p > '0' || *p < '9')
+			{
+				sum +=  atoi(argv[argc]);
+			}
+			else
+				return (printf("Error\n"), 1);
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+
 	}
+	printf("%d\n", sum);
 	return (0);
 }
