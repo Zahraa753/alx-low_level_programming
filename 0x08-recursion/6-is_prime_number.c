@@ -1,4 +1,5 @@
 #include "main.h"
+int helpfunc(int n, int val);
 
 /**
 *is_prime_number- determine if number is prime or not
