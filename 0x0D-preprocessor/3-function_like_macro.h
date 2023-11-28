@@ -1,6 +1,6 @@
-#ifndef FUN_LIKE_MECRO_H
-#define FUN_LIKE_MACRO_H
+#ifndef _OBJECT_LIKE_MACRO_H
+#define _OBJECT_LIKE_MACRO_H
 
-#define ABS(x) ((x) > 0 ? (x) : (-(x)))
+#define ABS(x) ((x) < 0 ? (-(x)) : (x))
 
-#endif /*FUN_LIKE_MACRO_H*/
+#endif
