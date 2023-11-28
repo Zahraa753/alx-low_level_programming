@@ -48,17 +48,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog = (dog_t *) malloc(sizeof(dog_t));
 	if (dog == NULL)
 	return (NULL);
-	dog->name = malloc(sizeof(char) * (length(name) + 1);
+	dog->name = malloc(sizeof(char) * (_length(name) + 1));
 	if ((*dog).name == NULL)
 	{
-	free(dog;
+	free(dog);
 	return (NULL);
 	}
-	dog->owner = malloc(sizeof(char) * (length(owner) + 1);
+	dog->owner = malloc(sizeof(char) * (_length(owner) + 1));
 	if ((*dog).owner == NULL)
 	{
 	free(dog->name);
-	free(dog)
+	free(dog);
 	return (NULL);
 	}
 	dog->name = _copy(dog->name, name);
