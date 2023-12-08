@@ -1,5 +1,4 @@
-:x
-
+#include <stdio.h>
 /**
  * main - Entry point
  * @argc: the number of named
