@@ -11,7 +11,7 @@
  * Return: success 0
 */
 
-int main(int argc, char *argv[])
+int main(int argc __attribute__ ((unused)), char *argv[])
 {
 	int x1;
 	int x2;
@@ -29,5 +29,3 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
-
-
