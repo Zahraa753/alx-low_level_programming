@@ -5,6 +5,5 @@ void _alert(void)__attribute__ ((constructor));
  */
 void _alert(void)
 {
-	printf("You're beat! and yet, you must allow,\n");
-	printf("I bore my house upion my back!\n");
+	printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
 }
