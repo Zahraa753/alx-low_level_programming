@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 	while (--argc)
 	{
-		for (p = argv[argc]; *p; p++)
+		for (p = argv[argc]; *p; p--)
 		{
 			if (*p < '0' || *p > '9')
 				return (printf("Error\n"), 1);
