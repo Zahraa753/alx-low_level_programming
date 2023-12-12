@@ -1,25 +1,24 @@
 #include "lists.h"
 
 /**
-* print_listint- function is member of struct
+* listint_len- function is member of struct
 * @h: the passed element
-* Descriptoin: print all elements of struct
+* Descriptoin: return number of node
 * Return: the number of elements
 */
 
-size_t print_listint(const listint_t *h)
+size_t listint_len(const listint_t *h);
 {
 	int i = 1;
 	listint_t *p;
 
-	printf("%d\n", h->n);
+	if (h == NULL)
+	return (-1);
 	p = h->next;
 	while (p)
 	{
-		printf("%d\n", p->n);
 		p = p->next;
 		++i;
-
 	}
 	return (i);
 }
