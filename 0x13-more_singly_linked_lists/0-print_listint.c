@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
 * print_listint- function is member of struct
 * @h: the passed element
@@ -9,7 +9,7 @@
 
 size_t print_listint(const listint_t *h)
 {
-	int i =1;
+	int i = 1;
 	listint_t *p;
 
 	printf("%d\n", h->n);
