@@ -9,7 +9,7 @@
 
 size_t print_listint(const listint_t *h)
 {
-	int i = 1;
+	size_t i = 1;
 	listint_t *p;
 
 	printf("%d\n", h->n);
@@ -18,8 +18,7 @@ size_t print_listint(const listint_t *h)
 	{
 		printf("%d\n", p->n);
 		p = p->next;
-		++i;
-
+		i++;
 	}
 	return (i);
 }
