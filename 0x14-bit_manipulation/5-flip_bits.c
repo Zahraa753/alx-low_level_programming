@@ -15,8 +15,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (; x > 0; )
 	{
-	if (x & 1ul)
+	if (x & 1)
 	sum++;
 	x = x >> 1;
 	}
+	return (sum);
 }
