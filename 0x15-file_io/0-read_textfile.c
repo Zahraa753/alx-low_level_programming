@@ -12,7 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int len;
 	int i;
 
-	fb = fopen(*filename, "r");
+	fb = fopen(filename, "r");
 	len = write(fb, filename, strlen(filename));
 
 	if (fb == -1)
