@@ -9,30 +9,30 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fb;
-	int len;
-	int i;
+	ssize_t lenr, lenw;
+	char *buf;
 
-	fb = fopen(filename, "r");
-	len = write(fb, filename, strlen(filename));
-
-	if (fb == -1)
-	return (0);
 	if (filename == NULL)
-	return (0);
-
-	if(letters <= len)
+		return (0);
+	fb = fopen(filename, O_RDONLY);
+	if (fb == -1)
+		return (0);
+	buf = malloc(sizeof(char) * letters);
+	if (buf == NULL)
 	{
-			write(fb, filename, letters);
-			if (write == -1)
-			return (0);
-			return (letters);
+		fclose(fb);
+		return (0);
 	}
-	else
-		{
-			write(fb, filename, strlen(filename));
-			if (write == -1)
-			return (0);
-			return (strlen(filename));
-		}
+	lenr = read(fb, buf, letters);
 	fclose(fb);
+	if (lenr == -1)
+	{
+		free(buf);
+		return (0);
+	}
+	lenw = write(STDOUT_FILENO, buf, lenr);
+	free(buf);
+	if (lenw != lenr)
+		return (0);
+	return (lenw);
 }
