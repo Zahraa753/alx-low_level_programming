@@ -11,6 +11,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int fb;
 	int t;
+	int num;
 
 	if (!filename)
 	return (-1);
@@ -22,7 +23,9 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 	text_content = "";
 
-	t = write(fb, text_content, _strlen(*text_content));
+	for (num = 0; text_content[num]; num++)
+		;
+	t = write(fb, text_content, num);
 	if (t == -1)
 	return (-1);
 
