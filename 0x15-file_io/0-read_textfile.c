@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 * read_textfile-the fuction which makes a file discriptor to printig content
 * @filename: the passed filename
@@ -8,23 +9,23 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fb;
+	int fb;
 	ssize_t lenr, lenw;
 	char *buf;
 
 	if (filename == NULL)
 		return (0);
-	fb = fopen(filename, O_RDONLY);
+	fb = open(filename, O_RDONLY);
 	if (fb == -1)
 		return (0);
 	buf = malloc(sizeof(char) * letters);
 	if (buf == NULL)
 	{
-		fclose(fb);
+		close(fb);
 		return (0);
 	}
 	lenr = read(fb, buf, letters);
-	fclose(fb);
+	close(fb);
 	if (lenr == -1)
 	{
 		free(buf);
